@@ -1,0 +1,71 @@
+BIP-M Framework .::. Ayuda / Help
+
+Para ejecutar BIP-M Framework, debe ingresar los siguientes argumentos / To run BIP-M Framework you must enter following parameters:
+
+- Path del archivo de volcado de memoria a analizar / Path dump memory dump to analyze.
+- Formato del archivo de volcado de memoria (Crash Dump).
+- Version del sistema operativo al que pertenece el archivo de volcado de memoria.
+
+Por ejemplo / For example:
+
+Para búsqueda de procesos / Search processes:
+
+java -jar BIP-M.jar M:\MEMORY_W7_X86_V1.DMP CRASH_DUMP WIN7_X86 MEMORY process active
+
+Para búsqueda de módulos / Search modules:
+
+java -jar BIP-M.jar N:\MEMORY.DMP CRASH_DUMP WIN7_X64 MEMORY lib
+
+
+Command reference:
+        java -jar BIP-M.jar path FORMATO SO PERSISTENCIA [comando] [modificador]
+
+        java -jar BIP-M.jar path FORMAT OS PERSISTENCE [command] [modifier]
+
+- Formatos de dump / Dump format: CRASH_DUMP
+
+- Command
+    Búsqueda de procesos / Search process: process
+        Modificadores / Modifiers: active
+                                   hidden
+
+    Búsqueda de módulos / Search modules: lib
+
+    Búsqueda de connection / Search connections: connection
+
+    Búsqueda de sockets / Search sockets: socket
+
+    Búsqueda de Rootkit Hooks a la SSDT / SSDT Hook (rootkit) search: rootkitssdt
+
+    Traducción de direcciones virtuales a físicas / Virtual address translation: translate VA [hexa]
+
+    Cálculo de offset a partir de dirección física / Offset by physical addres calculation: offset PA [hexa]
+
+    Cálculo de dirección física a partir de offset / Physical address by offset calculation: pabyoffset OFFSET [hexa]
+
+Configuración / Configuration:
+	
+- configuration.xml: posee la configuración relacionada con el formato de volcado de memoria
+                           y el sistema operativo a analizar. Permite establecer la familia de componentes
+                           para cada caso.
+                     it has the configuration for dump format file and operating system
+                           to analyze. It allows to get the familiy of necesary components to run.
+					 
+- perisistence_configuration: posee la configuración relacionada con medio de persistencia elegido 
+                                    para la información extraída del dump.
+                                    Se debe configurar, para cada caso, cuál es el recurso donde se encuentran
+                                    todos los datos de configuración según cada caso. Por ejemplo, para MySQL, 
+                                    el recurso es /src/mysql.xml.
+                              it has the configuration for the persistence strategy to perform. You must to 
+                                    indicate what's the resource where the configuration data is 
+                                    stored. For example, for MySQL, the resource is /src/mysql.xml.
+
+- sesión.properties: método para cálculo de hash y ruta donde guardar los logs / hash calculation method a log path.
+
+        Por ejemplo / For example:
+
+        # Hash method: MD5 ó SHA-1
+        hashMethod=MD5
+
+        # Log path
+        logPath=M:\\logsBIP\\

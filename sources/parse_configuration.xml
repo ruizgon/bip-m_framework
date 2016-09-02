@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<bip>
+    <parse_item>
+        <label>Process_Active</label>
+    </parse_item>
+    <parse_item>
+        <label>Process_Hidden</label>
+    </parse_item>
+    <parse_item>
+        <label>Process_Terminated</label>
+    </parse_item>
+    <parse_item>
+        <label>Connection_Active</label>
+    </parse_item>
+    <parse_item>
+        <label>Connection_Hidden</label>
+    </parse_item>
+    <parse_item>
+        <label>Socket_Active</label>
+    </parse_item>
+    <parse_item>
+        <label>Socket_Hidden</label>
+    </parse_item>
+    <parse_item>
+        <label>Library</label>
+    </parse_item>
+    <parse_item>
+        <label>Pointer_Replacement_HOOK</label>
+    </parse_item>
+    <parse_item>
+        <label>Table_Duplication_HOOK</label>
+    </parse_item>
+    <parse_item>
+        <label>InLine_HOOK</label>
+    </parse_item>
+</bip>

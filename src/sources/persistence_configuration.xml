@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<bip>
+	<persistence_conf>
+		<label>MEMORY</label>
+		<source>0</source>
+	</persistence_conf>
+	<persistence_conf>
+		<label>MYSQL</label>
+		<source>1</source>
+	</persistence_conf>
+</bip>

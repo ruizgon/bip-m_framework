@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<bip>
+	<conf>
+		<label>CRASH_DUMP_WIN7_X86</label>
+		<id>0</id>
+	</conf>
+	<conf>
+		<label>CRASH_DUMP_WIN7_X64</label>
+		<id>1</id>
+	</conf>
+        <conf>
+		<label>RAW_DUMP_WIN7_X86</label>
+		<id>2</id>
+	</conf>
+        <conf>
+		<label>RAW_DUMP_WIN7_X64</label>
+		<id>3</id>
+	</conf>
+</bip>

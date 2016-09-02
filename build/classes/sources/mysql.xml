@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<bip>
+	<conf>
+		<server>localhost</server>
+		<bd>bipm</bd>
+		<user>bipm</user>
+		<pass>bipm</pass>
+	</conf>
+</bip>
